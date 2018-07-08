@@ -16,7 +16,7 @@ pusher_client = pusher.Pusher(
   app_id=APP_ID,
   key=APP_KEY,
   secret=SECRET,
-  cluster='us2',
+  cluster='us2'
   # ssl=True
 )
 
