@@ -1,14 +1,16 @@
 import os
 import pusher
 from flask import Flask, render_template, request, jsonify
-# from config import APP_ID, APP_KEY, SECRET
+from config import APP_ID, APP_KEY, SECRET
 
 app = Flask(__name__)
 
+'''
 # Get from environment when hosting on Heroku
 APP_ID = os.environ.get('APP_ID')
 APP_KEY = os.environ.get('APP_KEY')
 SECRET = os.environ.get('SECRET')
+'''
 
 pusher_client = pusher.Pusher(
   app_id=APP_ID,
@@ -37,4 +39,3 @@ def message():
 
     except:
         return jsonify({'result': 'failure'})
-
